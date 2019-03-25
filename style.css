@@ -1,17 +1,66 @@
 .img-carrousel img{
     max-height: 100%;
     display: inline;
+    margin-bottom: 38px;
 }
 
+.registro{
+    height: 100vh;
+}
+#btns-registro{
+    display: none;
+    background-color: #F3E5F5;
+}
+
+.registro .text-center p{
+    display: inline;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.btn-registro{
+    width: 70%;
+    height: 40px;
+    margin-bottom: 15px;
+    border-radius: 3px; 
+}
+
+.btn-social{
+    margin: 20px 10px;
+}
+
+.logotipo{
+    display: flex;
+    align-items: center;
+}
+
+.logotipo p{
+    display: inline;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight:bold;
+}
+
+.img-logo{
+    width: 78px;
+    height: 78px;
+}
+
+.text-center p{
+    margin-bottom: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .sect1{
     background-color: #F3E5F5;
-    padding: 42px;
+    padding: 0px 35px;
     height: 100vh;
 }
 
 .slick-dots{
     display: flex;
     justify-content: space-around;
+    margin-top: 40px;
 }
 
 .slick-dots li.slick-active button:before{
