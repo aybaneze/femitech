@@ -1,15 +1,54 @@
+body{
+    background: rgba(237,234,242,1);
+background: -moz-linear-gradient(top, rgba(237,234,242,1) 0%, rgba(237,234,242,1) 29%, rgba(192,189,195,1) 49%, rgba(192,189,195,1) 50%, rgba(119,117,121,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,234,242,1)), color-stop(29%, rgba(237,234,242,1)), color-stop(49%, rgba(192,189,195,1)), color-stop(50%, rgba(192,189,195,1)), color-stop(100%, rgba(119,117,121,1)));
+background: -webkit-linear-gradient(top, rgba(237,234,242,1) 0%, rgba(237,234,242,1) 29%, rgba(192,189,195,1) 49%, rgba(192,189,195,1) 50%, rgba(119,117,121,1) 100%);
+background: -o-linear-gradient(top, rgba(237,234,242,1) 0%, rgba(237,234,242,1) 29%, rgba(192,189,195,1) 49%, rgba(192,189,195,1) 50%, rgba(119,117,121,1) 100%);
+background: -ms-linear-gradient(top, rgba(237,234,242,1) 0%, rgba(237,234,242,1) 29%, rgba(192,189,195,1) 49%, rgba(192,189,195,1) 50%, rgba(119,117,121,1) 100%);
+background: linear-gradient(to bottom, rgba(237,234,242,1) 0%, rgba(237,234,242,1) 29%, rgba(192,189,195,1) 49%, rgba(192,189,195,1) 50%, rgba(119,117,121,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edeaf2', endColorstr='#777579', GradientType=0 );
+}
+.text-center{
+    text-align: center;
+}
+.brd{
+    border-radius: 50px !important;
+    width: 300px;
+    text-transform: initial;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+/*slider*/
+.slick-list.draggable {
+    padding-bottom: 20px;
+}
+ul.slick-dots {
+    width: 30%;
+    margin: 20px auto 50px;
+    text-align: center;
+    position: relative;
+}
+
+.slick-slider {
+    margin: auto;
+    text-align: center;
+}
+
 .img-carrousel img{
     max-height: 100%;
     display: inline;
-    margin-bottom: 38px;
+    /* margin-bottom: 38px; */
+    max-width: 300px;
 }
+/*slider*/
 
 .registro{
     height: 100vh;
 }
 #btns-registro{
     display: none;
-    background-color: #F3E5F5;
 }
 
 .registro .text-center p{
@@ -27,7 +66,8 @@
 }
 
 .btn-social{
-    margin: 20px 10px;
+    margin: 15px 10px;
+    text-align: center;
 }
 
 .logotipo{
@@ -52,9 +92,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .sect1{
-    background-color: #F3E5F5;
     padding: 0px 35px;
-    height: 100vh;
+    text-align: center;
 }
 
 .slick-dots{
@@ -83,3 +122,9 @@
     align-items: center;
     justify-content: center;
   } */
+
+  @media only screen and (max-width: 480px) {
+    .img-carrousel img{
+        width: 100%;
+    }
+  }
