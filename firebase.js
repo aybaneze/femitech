@@ -23,8 +23,9 @@ const inFacebook = () => {
     provider.setCustomParameters({
         'display': 'popup'
     });
+
     firebase.auth().signInWithPopup(provider).then(function (result) {
-        guardaDatos(result.user);
+      //  guardaDatos(result.user);
         console.log('inicie sesion con facebook')
     }).catch(function (error) {
         // Handle Errors here.

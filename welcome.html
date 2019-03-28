@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>FemiTech</title>
+</head>
+
+<body class="welcome">
+    <section class="container">
+        <div class="row">
+            <div class="card sticky-action">
+                <div class="card-action">
+                    Soy titulo app y desde hoy yo cuidaré de ti, te acompañaré a donde vayas y nunca
+                    más estarás sóla.
+                </div>
+            </div>
+            <div class="card sticky-action">
+                <div class="card-action">
+                    Utilizaré la geolocalización con la que sabré en todo momento donde estás y en caso estés en peligro
+                    enviaré una alerta a tus contactos cercanos y centros de ayuda .
+                </div>
+            </div>
+            <div class="card sticky-action">
+                <div class="card-action">
+                    Utilizare tu micrófono que se activará cuando estés en peligro y tengas un audio de lo que te
+                    ocurrió en
+                    ese mometo.
+                </div>
+            </div>
+            <div class="card sticky-action">
+                <div class="card-action">
+                    ¿ Me permites a cuidarte?
+                </div>
+            </div>
+            <div class="text-center">
+                <button id="accept" class="waves-effect waves-light btn  green accent-4 brd">Permitir</button>
+            </div>
+        </div>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="file" accept="audio/*" capture="microphone" id="recorder" class="validate">
+                        <audio id="player" controls></audio>
+                        <label for="audio">Audio</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div id="mapContainer" style="width: 300px; height: 380px; position:absolute;"></div>
+        </div>
+
+    </section>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script> -->
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="app.js"></script>
+    <script>
+        var player = document.getElementById('player');
+
+        var handleSuccess = function (stream) {
+            if (window.URL) {
+                player.src = window.URL.createObjectURL(stream);
+            } else {
+                player.src = stream;
+            }
+        };
+
+        navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+            .then(handleSuccess)
+    </script>
+</body>
+
+</html>
