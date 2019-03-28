@@ -23,8 +23,7 @@ var platform = new H.service.Platform({
 
   var latitud, longitud;
     // Obtain the default map types from the platform object
-    var maptypes = platform.createDefaultLayers( {tileSize: pixelRatio === 1 ? 256 : 512,
-        ppi: pixelRatio === 1 ? undefined : 320});
+    var maptypes = platform.createDefaultLayers();
 var mapContainer =document.getElementById('mapContainer');
 var map ;
 if(navigator.geolocation){
@@ -43,20 +42,13 @@ if(navigator.geolocation){
             {
               zoom: 18,
               center: { lng: longitud, lat: latitud  },
-              pixelRatio: pixelRatio
+        
             });
             map.addObject(berlinMarker);
-            function moveMapToBerlin(map){
-                map.setCenter({lat:latitud, lng:longitud});
-                map.setZoom(14);
-              }
-        
-            var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
-        
+          
+   
             // Create the default UI components
-            var ui = H.ui.UI.createDefault(map, maptypes);
         
-            moveMapToBerlin(map);
          
     }
     navigator.geolocation.getCurrentPosition(success, function(error){
@@ -81,4 +73,3 @@ if(navigator.geolocation){
     // Instantiate (and display) a map object:
  
 
-   
