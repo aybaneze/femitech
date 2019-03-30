@@ -12,39 +12,42 @@
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="style.css">
     <title>FemiTech</title>
 </head>
 
 <body class="welcome">
-    <section class="container">
+    <div class="container tlogo">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="logotipo">
+                    <img class="img-logo" src="img/Símbolo 2 – 2.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="cards" class="container">
         <div class="row">
             <div class="card sticky-action">
                 <div class="card-action">
-                    Soy titulo app y desde hoy yo cuidaré de ti, te acompañaré a donde vayas y nunca
-                    más estarás sóla.
+                    Soy <strong>SOS 24</strong> y desde hoy yo cuidaré de ti, te acompañaré en donde estés y a donde vayas
                 </div>
             </div>
             <div class="card sticky-action">
                 <div class="card-action">
-                    Utilizaré la geolocalización con la que sabré en todo momento donde estás y en caso estés en peligro
-                    enviaré una alerta a tus contactos cercanos y centros de ayuda .
+                    Utilizaré tu geolocalización y si te encuentras en peligro, enviaré una alerta con tu ubicación en tiempo real a tus contactos
+                    y grupos de ayuda cercanos a ti.
                 </div>
             </div>
             <div class="card sticky-action">
                 <div class="card-action">
-                    Utilizare tu micrófono que se activará cuando estés en peligro y tengas un audio de lo que te
-                    ocurrió en
-                    ese mometo.
+                    ¿ Me permites cuidarte?
                 </div>
             </div>
-            <div class="card sticky-action">
-                <div class="card-action">
-                    ¿ Me permites a cuidarte?
-                </div>
-            </div>
+
             <div class="text-center">
                 <button id="accept" class="waves-effect waves-light btn  green accent-4 brd">Permitir</button>
             </div>
@@ -63,21 +66,168 @@
         <div class="row">
             <div id="mapContainer" style="width: 300px; height: 380px; position:absolute;"></div>
         </div>
-
     </section>
+        <section id="info" class="container info">
+                <div class="row">
+                    <h3 class="text-white">
+                        ¡Cuentame algo de ti!
+                    </h3>
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="name" type="email">
+                                    <label for="email">Mi nombre es</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="state" type="email">
+                                    <label for="email">mi estado civil es</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="email">
+                                    <label for="email">mi correo electrónico es</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="number" type="number">
+                                    <label for="email">Mi número de Télefono</label>
+                                </div>
+                            </div>
+        
+                        </form>
+
+                    </div>
+    
+        
+                    <div class="text-center">
+                        <button id="next" class="waves-effect waves-light btn  green accent-4 brd">Seguimos</button>
+                    </div>
+                </div>
+               
+            </section>
+
+            <section id="confianza" class="container">
+                    <div class="row">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+            
+                        <div class="card sticky-action">
+                            <div class="card-action">
+                                Bienvenida Amalia, gracias por confiar en mí.
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+            
+                        <div class="text-center">
+                            <a class="waves-effect waves-light btn  green accent-4 brd btn modal-trigger" href="#modal1">Permitir</a>
+                        </div>
+                    </div>
+                    
+                      <!-- Modal Structure -->
+                      <div id="modal1" class="modal bottom-sheet">
+                        <div class="modal-content">
+                          <h4>Código de verificación</h4>
+                          <p>Amelia te hemos enviado un código a tu celular, por favor ingrésalo a continuación.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <a href="#!" id="aceptModal" class="modal-close waves-effect waves-green btn-flat ">Aceptar</a>
+                        </div>
+                      </div>
+            
+                </section>
+            
+                <section id="verificacion" class="container text-center">
+                        <div class="row">
+                            <h3 class="text-white">
+                                ¡Verifica tu código!
+                            </h3>
+                            <p>
+                                Ingresa el código que te envié al <span style="color: #F24632">+51999999999</span>
+                            </p>
+                            <div class="row">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s2">
+                                            <input id="email" class="ibg" maxlength="1" type="number">
+                                        </div>
+                                        <div class="input-field col s2">
+                                            <input id="verif" class="ibg" maxlength="1" type="number">
+                                        </div>
+                                        <div class="input-field col s2">
+                                            <input id="email" class="ibg" maxlength="1" type="number">
+                                        </div>
+                                        <div class="input-field col s2">
+                                            <input id="email" class="ibg" maxlength="1" type="number">
+                                        </div>
+                                        <div class="input-field col s2">
+                                            <input id="email" class="ibg" maxlength="1" type="number">
+                                        </div>
+                                        <div class="input-field col s2">
+                                            <input id="email" class="ibg" maxlength="1" type="number">
+                                        </div>
+                                    </div>
+                
+                                    <div class="text-center">
+                                        <button id="contactbtn" class="waves-effect waves-light btn  green accent-4 brd">Seguimos</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <p>
+                                <span style="color: #F24632; margin-bottom: 15px;">No recibí ningún código</span>
+                            </p>
+                            <br><br><br>
+                            <p style="margin-bottom: 15px;">
+                                Toca continuemos para aceptar las condiciones, la política de datos, las políticas de privacidad y las condiciones del servicio.
+                            </p>
+                
+                
+                        </div>
+                
+                    </section>
+
+                    <section id="contacto" class="container text-center">
+                            <div class="row">
+                                <h3 class="text-white">
+                                    ¡Contactos de confianza!
+                                </h3>
+                                <br>
+                                <p>
+                                    Ahora es momento de seleccionar a tus contactos de confianza, quienes recibirán una alerta cuando te encuentres en peligro.
+                                </p>
+                                <br><br>
+                                <div class="card sticky-action">
+                                    <div class="card-action" style="background-color: #FFC911; color: #4D4D4D;">
+                                        Ingresar a tu lista de contactos
+                                    </div>
+                                </div>
+                                <div class="card sticky-action">
+                                    <div class="card-action" style="background-color: #B3B31D; color: #4D4D4D;">
+                                        Ingresar a tu lista de contactos
+                                    </div>
+                                </div>
+                    
+                            </div>
+                    
+                        </section>
+
     <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <script src="app.js"></script>
+   <script src="firebase.js"></script>
     <script>
         var player = document.getElementById('player');
 
