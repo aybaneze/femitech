@@ -27,3 +27,6 @@
   #contacto{
       display: none;
   }
+
+  .tlogo .row{
+      margin-bottom: 0;  }
